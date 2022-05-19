@@ -1,0 +1,163 @@
+$orange: #de653f;
+$light-orange: #e48364;
+$dark-white: #f7f7f7;
+$gray: #c2c2ca;
+$black: #1a1917;
+
+.home {
+  color: $dark-white;
+}
+
+.home h1,
+.home h2,
+.home h3 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.home p {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.banner {
+  width: 100%;
+  background-size: cover;
+  background-image: url("../../public/spurwing-agency-sFjY4AWDYUI-unsplash.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  max-height: 900px;
+}
+
+//searchbar
+.searchContainer {
+  background-color: $orange;
+  width: 76%;
+  height: 100px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 100px;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.searchBar input {
+  width: 100%;
+  height: 70px;
+  background-color: $light-orange;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  z-index: 3;
+}
+
+.searchResults {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  position: absolute;
+  z-index: 2;
+  top: 85px;
+  background-color: $light-orange;
+  box-shadow: 0px 12px 50px black;
+  border: 0.5px solid $orange;
+}
+
+.searchResults li {
+  padding: 10px;
+  list-style: none;
+  color: white;
+}
+
+.searchResults li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchResults li:hover {
+  background-color: $orange;
+}
+
+.searchBarImg {
+  width: 100px;
+  height: 80px;
+  background-size: cover;
+  margin-right: 1em;
+}
+
+//second section
+.establishments {
+  background-image: url("../../public/ducminh-nguyen-A89q-EFB9X4-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 3em auto;
+  justify-content: center;
+  padding: 3em;
+  border-radius: 20px;
+  box-shadow: 3px 3px 12px $gray;
+  max-width: 1200px;
+  max-height: 700px;
+}
+
+.establishments a {
+  background-color: $dark-white;
+  color: $black;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 1em;
+  font-size: 20px;
+}
+
+//third section
+.contact {
+  position: relative;
+  width: 90%;
+  display: block;
+  height: 60vh;
+  margin: auto;
+  max-width: 1200px;
+  max-height: 700px;
+}
+
+.contactText {
+  background-color: $orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5em;
+  width: 85%;
+  border-radius: 20px;
+  box-shadow: 3px 3px 12px $gray;
+}
+
+.contactImage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url("../../public/pexels-samson-katt-5255645.jpg");
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 3px 3px 12px $gray;
+}
+
+.contact a {
+  border-bottom: 1px solid $dark-white;
+}

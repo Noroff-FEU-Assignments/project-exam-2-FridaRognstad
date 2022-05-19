@@ -1,0 +1,85 @@
+$orange: #de653f;
+$dark-white: #f7f7f7;
+$gray: #c2c2ca;
+
+.formContainer {
+  background-color: $orange;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 12px $gray;
+  margin-top: 3em;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.formContainer fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.formError {
+  background-color: #eeb29f;
+  color: darkred;
+  padding: 20px;
+  border: 1px solid darkred;
+  text-align: center;
+}
+
+.formContainer h1 {
+  color: $dark-white;
+  text-align: center;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  color: $dark-white;
+}
+
+.formContainer input,
+.formContainer textarea {
+  background-color: #eeb29f;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.button {
+  background-color: $dark-white;
+  border: $orange;
+  width: fit-content;
+  padding: 1em 2em;
+  border-radius: 1em;
+  margin: 1em auto;
+  text-transform: uppercase;
+}
+
+.dashboard {
+  width: 90%;
+  margin: auto;
+}
+
+.dashboard a {
+  border: #de653f solid 1px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.contactList {
+  border: solid 1px #de653f;
+  padding: 20px;
+  background-color: $orange;
+}
+
+.comment {
+  margin: 2em;
+  list-style: none;
+  background-color: $dark-white;
+  padding: 1em;
+}

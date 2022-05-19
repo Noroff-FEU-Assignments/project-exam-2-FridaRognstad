@@ -1,0 +1,59 @@
+$orange: #de653f;
+$dark-white: #f7f7f7;
+$gray: #c2c2ca;
+
+.contact {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  height: 90vh;
+}
+
+.error {
+  color: red;
+  background-color: #eeb29f;
+  margin-top: -8px;
+  border-radius: 0 0 5px 5px;
+  padding: 3px;
+  border-top: $orange 0.5px solid;
+}
+
+.formContainer {
+  background-color: $orange;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 12px $gray;
+  margin-top: 3em;
+}
+
+.formContainer h1 {
+  color: $dark-white;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  color: $dark-white;
+}
+
+.formContainer input,
+.formContainer textarea {
+  background-color: #eeb29f;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.button {
+  background-color: $dark-white;
+  border: $orange;
+  width: fit-content;
+  padding: 1em 2em;
+  border-radius: 1em;
+  margin: 1em auto;
+  text-transform: uppercase;
+}

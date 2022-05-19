@@ -1,0 +1,35 @@
+$orange: #de653f;
+$light-orange: #e48364;
+$dark-white: #f7f7f7;
+$gray: #c2c2ca;
+$black: #1a1917;
+
+.establishments {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.estCard {
+  max-width: 400px;
+  border-radius: 2em;
+  box-shadow: 3px 3px 12px $gray;
+  width: 400px;
+  margin: 2em;
+}
+
+.estCard h3,
+.estCard h4 {
+  margin: 0;
+}
+
+.cardImg {
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2em 2em 0 0;
+}
+
+.cardText {
+  padding: 1em 2em;
+}

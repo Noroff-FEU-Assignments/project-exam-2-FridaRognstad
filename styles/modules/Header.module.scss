@@ -1,0 +1,18 @@
+$black: #1a1917;
+$white: #ffffff;
+$dark-white: #f7f7f7;
+$gray: #c2c2ca;
+$blue: #2a81ac;
+
+.nav {
+  border-bottom: solid 1px $gray;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  color: $black;
+  padding: 10px;
+  margin: 10px;
+}
