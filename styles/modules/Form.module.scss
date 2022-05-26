@@ -1,6 +1,8 @@
 $orange: #de653f;
 $dark-white: #f7f7f7;
 $gray: #c2c2ca;
+$blue: #2a81ac;
+$light-blue: #95c0d5;
 
 .contact {
   width: 90%;
@@ -19,18 +21,22 @@ $gray: #c2c2ca;
 }
 
 .formContainer {
-  background-color: $orange;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 3px 3px 12px $gray;
   margin-top: 3em;
+  transition: transform 0.2s;
+}
+
+.formContainer:hover {
+  transform: scale(1.02);
 }
 
 .formContainer h1 {
   color: $dark-white;
 }
 
-.formContainer form {
+.formContainer form,
+.formContainer fieldset {
   display: flex;
   flex-direction: column;
 }
@@ -56,4 +62,41 @@ $gray: #c2c2ca;
   border-radius: 1em;
   margin: 1em auto;
   text-transform: uppercase;
+}
+
+//contact form
+.contactForm {
+  background-color: $orange;
+  border-radius: 20px;
+  box-shadow: 3px 3px 12px $gray;
+}
+
+//Enquiry form
+.enquiryForm {
+  background-color: $blue;
+  border-radius: 20px;
+  width: 50%;
+  margin: auto;
+  box-shadow: 3px 3px 12px $gray;
+}
+
+.enquiryForm input {
+  background-color: $light-blue;
+}
+
+//dashboard form
+.dashboardForm {
+  background-color: $blue;
+  border-radius: 1em;
+  box-shadow: 3px 3px 12px $gray;
+  margin: 1em;
+}
+
+.dashboardForm input,
+.dashboardForm textarea {
+  background-color: $light-blue;
+}
+
+.dashboardForm fieldset {
+  border: none;
 }

@@ -9,6 +9,7 @@ export default function EstablishmentForm({ placeholder }) {
 
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+
   async function getEstablishments() {
     try {
       const response = await axios.get(url);

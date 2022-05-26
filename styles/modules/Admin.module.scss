@@ -1,6 +1,7 @@
 $orange: #de653f;
 $dark-white: #f7f7f7;
 $gray: #c2c2ca;
+$blue: #2a81ac;
 
 .formContainer {
   background-color: $orange;
@@ -9,7 +10,7 @@ $gray: #c2c2ca;
   box-shadow: 3px 3px 12px $gray;
   margin-top: 3em;
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -63,6 +64,10 @@ $gray: #c2c2ca;
 .dashboard {
   width: 90%;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
 }
 
 .dashboard a {
@@ -71,10 +76,23 @@ $gray: #c2c2ca;
   margin: 20px;
 }
 
-.contactList {
-  border: solid 1px #de653f;
+.dashboardList {
   padding: 20px;
-  background-color: $orange;
+  background-color: $blue;
+  border-radius: 1em;
+  margin: 2em;
+  box-shadow: 3px 3px 12px $gray;
+  transition: transform 0.2s;
+  max-width: 500px;
+}
+
+.dashboardList:hover {
+  transform: scale(1.02);
+}
+
+.dashboard h3 {
+  color: $dark-white;
+  text-align: center;
 }
 
 .comment {
@@ -82,4 +100,5 @@ $gray: #c2c2ca;
   list-style: none;
   background-color: $dark-white;
   padding: 1em;
+  border-radius: 1em;
 }

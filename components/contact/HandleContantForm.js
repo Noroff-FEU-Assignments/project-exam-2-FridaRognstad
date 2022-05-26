@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import styles from "../../styles/modules/Contact.module.scss";
+import styles from "../../styles/modules/Form.module.scss";
 import Heading from "../layout/Heading";
 import { BASE_URL } from "../../constants/Api";
 

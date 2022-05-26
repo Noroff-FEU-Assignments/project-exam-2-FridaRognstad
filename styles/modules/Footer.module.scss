@@ -1,0 +1,49 @@
+$orange: #de653f;
+$light-orange: #e48364;
+$dark-white: #f7f7f7;
+$gray: #c2c2ca;
+$black: #1a1917;
+
+.footer {
+  background-color: $dark-white;
+  height: 200px;
+  margin-top: 50px;
+  padding: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer .lisItem {
+  text-decoration: none;
+}
+
+.link {
+  margin-top: 1em;
+}
+
+.footer h4 {
+  margin: 0;
+}
+
+.copy {
+  position: absolute;
+  bottom: 1em;
+}
+
+.adminNav {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  max-height: 60px;
+}
+
+.footer .link {
+  margin-top: 3px;
+}

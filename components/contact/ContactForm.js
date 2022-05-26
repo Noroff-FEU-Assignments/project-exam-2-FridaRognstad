@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import styles from "../../styles/modules/Contact.module.scss";
+import styles from "../../styles/modules/Form.module.scss";
 import Heading from "../layout/Heading";
 import { BASE_URL } from "../../constants/Api";
 import axios from "axios";
@@ -31,22 +31,12 @@ export default function ContactForm() {
     resolver: yupResolver(schema),
   });
 
-  //  const data = {
-  //      post: postId.value,
-  //      author_name: fullName.value,
-  //      author_email: email.value,
-  //      content: comment.value,
-  //    };
-
   const id = 89;
   const url = BASE_URL + `wp/v2/comments?post=` + id + `&content=contactus`;
 
   async function onSubmit(data) {
     setSubmitting(true);
     setError(null);
-
-    data.status = "approved";
-
     console.log(data);
     try {
       const response = await axios.post(url, data);
@@ -60,21 +50,23 @@ export default function ContactForm() {
   }
 
   return (
-    <div className={styles.formContainer}>
-      <Heading title={"Contact"} />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="hidden" id="post" value={id} {...register("post")} />
-        <label htmlFor="author_name">Full name</label>
-        <input id="author_name" {...register("author_name")} />
+    <div className={styles.contactForm}>
+      <div className={styles.formContainer}>
+        <Heading title={"Contact"} />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input type="hidden" id="post" value={id} {...register("post")} />
+          <label htmlFor="author_name">Full name</label>
+          <input id="author_name" {...register("author_name")} />
 
-        <label htmlFor="author_email">Email</label>
-        <input id="author_email" type="email" {...register("author_email")} />
+          <label htmlFor="author_email">Email</label>
+          <input id="author_email" type="email" {...register("author_email")} />
 
-        <label htmlFor="content">Message</label>
-        <textarea id="content" {...register("content")} />
+          <label htmlFor="content">Message</label>
+          <textarea id="content" {...register("content")} />
 
-        <button className={styles.button}>Send</button>
-      </form>
+          <button className={styles.button}>Send</button>
+        </form>
+      </div>
     </div>
   );
 }

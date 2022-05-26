@@ -7,6 +7,13 @@ $black: #1a1917;
 .establishments {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
 }
 
 .estCard {
@@ -23,13 +30,34 @@ $black: #1a1917;
 }
 
 .cardImg {
-  height: 300px;
+  height: 250px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border-radius: 2em 2em 0 0;
 }
 
 .cardText {
   padding: 1em 2em;
+}
+
+.filter {
+  border-bottom: $gray solid 1px;
+  box-shadow: 0 4px 6px -2px $gray;
+}
+
+.filter input {
+  border: $orange 2px solid;
+  border-radius: 1em;
+  width: 60%;
+  height: 50px;
+  display: block;
+  margin: 30px auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .cardImg {
+    height: 300px;
+  }
 }

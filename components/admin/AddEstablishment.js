@@ -4,15 +4,17 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import useAxios from "../../hooks/useAxios";
 import Heading from "../layout/Heading";
-import MediaDropdown from "./Media";
+import { ESTABLISHMENTS_PATH, POST_KEY } from "../../constants/Api";
+import styles from "../../styles/modules/Form.module.scss";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
+  description: yup.string().required("Please enter a description"),
 });
 
 export default function AddPost() {
   const [submitting, setSubmitting] = useState(false);
-  const [serverError, setServerError] = useState(null);
+  const [serverError, setError] = useState(null);
 
   const http = useAxios();
 
@@ -29,30 +31,34 @@ export default function AddPost() {
     console.log(data);
 
     try {
-      const response = await http.post("wp/v2/posts", data);
+      const response = await http.post(ESTABLISHMENTS_PATH + POST_KEY, data);
       console.log("response", response.data);
     } catch (error) {
       console.log("error", error);
-      setServerError(error.toString());
+      setError(error.toString());
     } finally {
       setSubmitting(false);
     }
   }
 
   return (
-    <>
-      <Heading title="Add Establishment" />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset disabled={submitting}>
-          <label htmlFor="title">Title</label>
-          <input id="title" {...register("title")} />
+    <div className={styles.dashboardForm}>
+      <div className={styles.formContainer}>
+        <Heading title="Add Establishment" />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <fieldset disabled={submitting}>
+            <label htmlFor="name">Title</label>
+            <input id="name" {...register("name")} />
 
-          <label htmlFor="content">Description</label>
-          <textarea id="content" {...register("content")} />
+            <label htmlFor="description">Description</label>
+            <textarea id="description" {...register("description")} />
 
-          <button>{submitting ? "Submitting..." : "Submit"}</button>
-        </fieldset>
-      </form>
-    </>
+            <button className={styles.button}>
+              {submitting ? "Submitting..." : "Submit"}
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
   );
 }

@@ -10,7 +10,7 @@ h1 {
   font-family: "Jost", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  font-size: 70px;
+  font-size: 40px;
   margin: 0;
 }
 a {
@@ -28,8 +28,18 @@ a {
   min-height: 90vh;
 }
 
+.active {
+  font-weight: 600;
+}
+
 //colors
 $black: #1a1917;
 $white: #ffffff;
 $dark-white: #f7f7f7;
 $blue: #2a81ac;
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+}

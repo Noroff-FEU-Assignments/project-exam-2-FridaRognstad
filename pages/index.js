@@ -16,10 +16,14 @@ export default function Home() {
           <div className={styles.searchContainer}>
             <EstablishmentForm placeholder={"Search for a place to stay"} />
           </div>
-          <Heading title={"Welcome to Holidaze!"} />
-          <Paragraph
-            content={"Find the perfect place to stay while visiting in Bergen"}
-          />
+          <div className={styles.heading}>
+            <Heading title={"Welcome to Holidaze!"} />
+            <Paragraph
+              content={
+                "Find the perfect place to stay while visiting in Bergen"
+              }
+            />
+          </div>
         </section>
 
         <section className={styles.establishments}>

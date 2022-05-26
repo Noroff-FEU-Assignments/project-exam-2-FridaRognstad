@@ -1,7 +1,7 @@
 import ContactForm from "../components/contact/ContactForm";
 import Head from "../components/layout/Head";
 import Layout from "../components/layout/Layout";
-import styles from "../styles/modules/Contact.module.scss";
+import styles from "../styles/modules/Form.module.scss";
 
 export default function Contact() {
   return (

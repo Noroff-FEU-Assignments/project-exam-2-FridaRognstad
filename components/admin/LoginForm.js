@@ -40,6 +40,7 @@ export default function LoginForm() {
     } catch (error) {
       console.log("error", error);
       setLoginError(error.toString());
+      setLoginError("Wrong username or password");
     } finally {
       setSubmitting(false);
     }
@@ -54,10 +55,10 @@ export default function LoginForm() {
           <input id="username" {...register("username")} />
 
           <label htmlFor="password">Password</label>
-          <input id="password" {...register("password")} />
+          <input type="password" id="password" {...register("password")} />
           <div>{loginError}</div>
           <button className={styles.button}>
-            {submitting ? "..." : "Login"}
+            {submitting ? "Please wait" : "Login"}
           </button>
         </fieldset>
       </form>
