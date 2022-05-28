@@ -5,6 +5,13 @@ $gray: #c2c2ca;
 $blue: #2a81ac;
 $orange: #de653f;
 
+.light,
+.dark,
+.noUnderline {
+  position: relative;
+  height: 50px;
+}
+
 .light {
   background-color: $white;
   border-bottom: solid 1px $gray;
@@ -19,6 +26,15 @@ $orange: #de653f;
   background-color: $white;
 }
 
+.logo {
+  margin: 12px;
+  float: left;
+}
+
+.nav ul {
+  list-style: none;
+}
+
 .dark .nav a {
   color: $dark-white;
 }
@@ -28,17 +44,37 @@ $orange: #de653f;
 }
 
 .nav {
-  height: 50px;
-  display: flex;
-  align-items: center;
+  display: none;
   position: relative;
 }
 
-.adminNav {
+.nav ul {
+  margin: 0;
+  background-color: $white;
   position: absolute;
-  right: 10px;
+  z-index: 10;
+  width: 100%;
+  top: 50px;
+  border-bottom: $orange solid 1px;
 }
 
+.dark .nav ul {
+  background-color: $black;
+}
+
+.nav ul li {
+  padding: 10px;
+}
+
+.dark .nav ul li a {
+  color: $dark-white;
+}
+
+.nav ul li:active {
+  background-color: $orange;
+}
+
+.burger:hover,
 .adminNav:hover {
   cursor: pointer;
 }
@@ -51,4 +87,56 @@ $orange: #de653f;
 
 .nav a:hover {
   color: $blue;
+}
+
+.burger {
+  float: right;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+}
+
+.burgerLine {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  margin: 5px;
+  background-color: $orange;
+}
+
+@media only screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav ul {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    top: unset;
+    position: unset;
+    width: unset;
+    background-color: unset;
+    border-bottom: unset;
+  }
+
+  .nav ul li a {
+    color: unset;
+  }
+
+  .nav ul li:active {
+    background-color: unset;
+  }
+
+  .adminNav {
+    position: absolute;
+    right: 10px;
+    display: flex;
+  }
 }

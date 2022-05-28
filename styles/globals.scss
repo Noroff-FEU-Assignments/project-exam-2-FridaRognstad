@@ -1,3 +1,9 @@
+$orange: #de653f;
+$light-orange: #e48364;
+$dark-white: #f7f7f7;
+$gray: #c2c2ca;
+$black: #1a1917;
+
 html,
 body {
   padding: 0;
@@ -7,12 +13,20 @@ body {
 }
 
 h1 {
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.1rem;
   font-size: 40px;
   margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -20,6 +34,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+header,
+footer,
+a {
+  font-family: "Jost", sans-serif;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
 }
 
 .container {

@@ -15,6 +15,10 @@ $black: #1a1917;
   margin: 0;
 }
 
+.home a {
+  font-size: 1.2em;
+}
+
 .home p {
   margin-top: 0;
   font-size: 20px;
@@ -23,7 +27,7 @@ $black: #1a1917;
 .banner {
   width: 100%;
   background-size: cover;
-  background-image: url("../../public/spurwing-agency-sFjY4AWDYUI-unsplash.jpg");
+  background-image: url("../../public/bergen.jpg");
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
@@ -36,7 +40,7 @@ $black: #1a1917;
 
 .heading {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   text-align: center;
   width: 95%;
 }
@@ -69,6 +73,10 @@ $black: #1a1917;
   border-radius: 20px;
   color: white;
   z-index: 3;
+}
+
+.searchBar input::placeholder {
+  color: $dark-white;
 }
 
 .searchResults {
@@ -123,6 +131,11 @@ $black: #1a1917;
   max-width: 1200px;
   max-height: 400px;
   background-position: center;
+  transition: transform 1s;
+}
+
+.establishments:hover {
+  transform: scale(1.008);
 }
 
 .establishments a {
@@ -131,8 +144,14 @@ $black: #1a1917;
   padding: 20px;
   width: fit-content;
   border-radius: 1em;
-  font-size: 20px;
   text-align: center;
+  transition: transform 0.5s;
+}
+
+.establishments a:hover {
+  transition: all 1s ease;
+  background-color: white;
+  transform: scale(1.04);
 }
 
 //third section
@@ -143,6 +162,11 @@ $black: #1a1917;
   margin: auto;
   max-width: 1200px;
   min-height: 440px;
+  transition: transform 1s;
+}
+
+.contact:hover {
+  transform: scale(1.008);
 }
 
 .contactText {
@@ -169,8 +193,15 @@ $black: #1a1917;
 
 .contact a {
   border-bottom: 1px solid $dark-white;
-  width: 210px;
+  width: 230px;
   display: block;
+  transition: transform 1s;
+}
+
+.contact a:hover {
+  width: 260px;
+  transition: all 0.3s ease;
+  transform: scale(1.03);
 }
 
 @media only screen and (min-width: 400px) {
@@ -209,6 +240,7 @@ $black: #1a1917;
 
   .heading {
     width: unset;
+    margin: -100px;
   }
 
   //establishments section

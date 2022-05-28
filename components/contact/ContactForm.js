@@ -51,6 +51,7 @@ export default function ContactForm() {
 
   return (
     <div className={styles.contactForm}>
+      <div className={styles.contactImg}></div>
       <div className={styles.formContainer}>
         <Heading title={"Contact"} />
         <form onSubmit={handleSubmit(onSubmit)}>

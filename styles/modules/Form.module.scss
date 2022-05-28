@@ -11,6 +11,15 @@ $light-blue: #95c0d5;
   height: 90vh;
 }
 
+.contactImg {
+  background-image: url("../../public/contact.jpg");
+  display: block;
+  width: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1em 0 0 1em;
+}
+
 .error {
   color: red;
   background-color: #eeb29f;
@@ -69,6 +78,13 @@ $light-blue: #95c0d5;
   background-color: $orange;
   border-radius: 20px;
   box-shadow: 3px 3px 12px $gray;
+  display: flex;
+  margin: 20px;
+  max-width: 1200px;
+}
+
+.contactForm .formContainer {
+  width: 60%;
 }
 
 //Enquiry form

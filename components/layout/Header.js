@@ -3,16 +3,13 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import styles from "../../styles/modules/Header.module.scss";
+import logo from "../../public/holidaze-logo.png";
+import Image from "next/image";
+import Nav from "./Nav";
+import showMenu from "../../hooks/showMenu";
 
 export default function Header() {
-  const [auth, setAuth] = useContext(AuthContext);
-
   const router = useRouter();
-
-  function logout() {
-    setAuth(null);
-    router.push(`/`);
-  }
 
   return (
     <header
@@ -24,33 +21,15 @@ export default function Header() {
           : `${styles.light}`
       }
     >
-      <nav className={styles.nav}>
-        <Link href="/">
-          <a className={router.pathname == "/" ? "active" : ""}>Home</a>
-        </Link>
-        <Link href="/establishments">
-          <a className={router.pathname == "/establishments" ? "active" : ""}>
-            Establishments
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a className={router.pathname == "/contact" ? "active" : ""}>
-            Contact
-          </a>
-        </Link>
-        {auth ? (
-          <div className={styles.adminNav}>
-            <Link href="/admin/dashboard">
-              <a className={styles.link}>Dashboard</a>
-            </Link>{" "}
-            <a className={styles.link} onClick={logout}>
-              Log out
-            </a>
-          </div>
-        ) : (
-          <div></div>
-        )}
-      </nav>
+      <span className={styles.logo}>
+        <Image src={logo} alt="Holidaze logo" width="100px" height="20px" />
+      </span>
+      <div className={styles.burger} onClick={showMenu}>
+        <span className={styles.burgerLine}></span>
+        <span className={styles.burgerLine}></span>
+        <span className={styles.burgerLine}></span>
+      </div>
+      <Nav />
     </header>
   );
 }
