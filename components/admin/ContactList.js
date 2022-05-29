@@ -7,33 +7,31 @@ import { COMMENTS_PATH } from "../../constants/Api";
 import removeTags from "../../hooks/removeTags";
 
 export default function CommentList({ register }) {
-  const [media, setMedia] = useState([]);
-
+  const [data, setData] = useState([]);
   const http = useAxios();
+
   const contactUrl = COMMENTS_PATH;
 
-  useEffect(function () {
-    async function getComments() {
-      try {
-        const response = await http.get(contactUrl);
-        setMedia(response.data);
-      } catch (error) {
-        console.log(error);
-      }
+  async function getComments() {
+    try {
+      const response = await http.get(contactUrl);
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
     }
+  }
 
-    getComments();
-  }, []);
+  getComments();
 
   return (
     <div className={styles.dashboardList}>
       <Heading size="3" title="Messages" />
-      {media.map((media) => {
-        const message = removeTags(media.content.rendered);
-        const date = new Date(media.date).toLocaleString();
+      {data.map((data) => {
+        const message = removeTags(data.content.rendered);
+        const date = new Date(data.date).toLocaleString();
         return (
-          <div key={media.id} value={media.id} className={styles.comment}>
-            <li>From: {media.author_name}</li>
+          <div key={data.id} value={data.id} className={styles.comment}>
+            <li>From: {data.author_name}</li>
             <li>{date}</li>
             <li>{message}</li>
           </div>

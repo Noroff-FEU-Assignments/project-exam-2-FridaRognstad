@@ -8,11 +8,11 @@ import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
 export default function EstablishmentList({ placeholder }) {
-  const url = BASE_URL + ESTABLISHMENTS_PATH + READ_KEY;
   const router = useRouter();
   const [data, setData] = useState([]);
 
   useEffect(function () {
+    const url = BASE_URL + ESTABLISHMENTS_PATH + READ_KEY;
     async function getEstablishments() {
       try {
         const response = await axios.get(url);
@@ -45,9 +45,6 @@ export default function EstablishmentList({ placeholder }) {
 
       <div className={styles.establishments}>
         {data.map((data) => {
-          let backgroundImg =
-            "https://holidaze.fridarognstad.one/wp-content/uploads/woocommerce-placeholder.png";
-
           return (
             <div key={data.id} className={styles.estCard}>
               <Link
@@ -57,7 +54,7 @@ export default function EstablishmentList({ placeholder }) {
                 <a>
                   <div
                     className={styles.cardImg}
-                    style={{ backgroundImage: `url(${backgroundImg})` }}
+                    style={{ backgroundImage: `url(${data.images[0].src})` }}
                   ></div>
                   <div className={styles.cardText}>
                     <Heading size="3" title={data.name} />

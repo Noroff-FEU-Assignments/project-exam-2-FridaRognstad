@@ -4,8 +4,8 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import useAxios from "../../hooks/useAxios";
 import Heading from "../layout/Heading";
-import MediaDropdown from "./Media";
 import { ESTABLISHMENTS_PATH, POST_KEY } from "../../constants/Api";
+import styles from "../../styles/modules/Form.module.scss";
 
 const schema = yup.object().shape({
   name: yup.string().required("Title is required"),
@@ -39,28 +39,24 @@ export default function AddPost() {
   }
 
   return (
-    <>
-      <Heading title="Add Establishment" />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset>
-          <div>
+    <div className={styles.dashboardForm}>
+      <div className={styles.formContainer}>
+        <Heading title="Add Establishment" />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <fieldset>
             <label htmlFor="name">Title</label>
             <input id="name" {...register("name")} />
-          </div>
 
-          <div>
             <label htmlFor="description">Description</label>
             <textarea id="description" {...register("description")} />
-          </div>
 
-          <div>
             <label htmlFor="price">Price</label>
             <input id="price" {...register("price")} />
-          </div>
 
-          <button>{"Submit"}</button>
-        </fieldset>
-      </form>
-    </>
+            <button className={styles.button}>{"Submit"}</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
   );
 }

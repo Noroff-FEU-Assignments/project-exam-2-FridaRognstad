@@ -7,12 +7,12 @@ import Heading from "../layout/Heading";
 import removeTags from "../../hooks/removeTags";
 
 export default function EnquiriesList() {
-  const url = BASE_URL + ESTABLISHMENTS_PATH + "reviews" + READ_KEY;
   const http = useAxios();
 
   const [data, setData] = useState([]);
 
   useEffect(function () {
+    const url = BASE_URL + ESTABLISHMENTS_PATH + "reviews" + READ_KEY;
     async function getEnquaries() {
       try {
         const response = await axios.get(url);

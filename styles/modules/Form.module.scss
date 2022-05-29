@@ -4,22 +4,6 @@ $gray: #c2c2ca;
 $blue: #2a81ac;
 $light-blue: #95c0d5;
 
-.contact {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  height: 90vh;
-}
-
-.contactImg {
-  background-image: url("../../public/contact.jpg");
-  display: block;
-  width: 40%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 1em 0 0 1em;
-}
-
 .error {
   color: red;
   background-color: #eeb29f;
@@ -84,14 +68,21 @@ $light-blue: #95c0d5;
 }
 
 .contactForm .formContainer {
-  width: 60%;
+  width: 100%;
+}
+
+.contact {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  height: 90vh;
 }
 
 //Enquiry form
 .enquiryForm {
   background-color: $blue;
   border-radius: 20px;
-  width: 50%;
+  width: 95%;
   margin: auto;
   box-shadow: 3px 3px 12px $gray;
 }
@@ -115,4 +106,24 @@ $light-blue: #95c0d5;
 
 .dashboardForm fieldset {
   border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .enquiryForm {
+    width: 50%;
+    max-width: 800px;
+  }
+
+  .contactImg {
+    background-image: url("../../public/contact.jpg");
+    display: block;
+    width: 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1em 0 0 1em;
+  }
+
+  .contactForm .formContainer {
+    width: 60%;
+  }
 }

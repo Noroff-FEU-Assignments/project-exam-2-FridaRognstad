@@ -1,4 +1,3 @@
-import MediaDropdown from "../../components/admin/Media";
 import Head from "../../components/layout/Head";
 import Layout from "../../components/layout/Layout";
 import Link from "next/link";
