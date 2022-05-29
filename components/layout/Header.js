@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../../styles/modules/Header.module.scss";
 import logo from "../../public/holidaze-logo.png";
