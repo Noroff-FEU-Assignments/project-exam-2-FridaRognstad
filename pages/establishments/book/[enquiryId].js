@@ -11,8 +11,8 @@ export default function EnquiryPage({ id }) {
   return (
     <Layout>
       <Head title={enquiryId} />
-      <Link href={`../${enquiryId}`}>
-        <a>Back</a>
+      <Link className="breadcrumps" href={`../${enquiryId}`}>
+        <a className="breadcrumps_link">/ back</a>
       </Link>
       <EnquaryForm enquiryId={enquiryId} />;
     </Layout>

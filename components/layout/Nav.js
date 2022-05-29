@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import styles from "../../styles/modules/Header.module.scss";
-import logo from "../../public/holidaze-logo.png";
-import Image from "next/image";
 
 export default function Nav() {
   const [auth, setAuth] = useContext(AuthContext);

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import PropTypes from "prop-types";
 
 const url = BASE_URL + `wc/v3/products/reviews` + POST_KEY;
 
@@ -24,7 +25,6 @@ export default function EnquaryForm({ enquiryId }) {
       .required("Please enter an email address")
       .email("Please enter a valid email format"),
     review: yup.string("must be a number").required("Select a date"),
-    rating: yup.string("must be a number").required("Select a date"),
   });
 
   const { register, handleSubmit, errors } = useForm({
@@ -67,7 +67,7 @@ export default function EnquaryForm({ enquiryId }) {
             {...register("reviewer_email")}
           />
 
-          <label htmlFor="review">Check in</label>
+          <label htmlFor="review">Checkin</label>
           <input id="review" type="date" {...register("review")} />
 
           <button className={styles.button}>Send</button>
@@ -76,3 +76,7 @@ export default function EnquaryForm({ enquiryId }) {
     </div>
   );
 }
+
+EnquaryForm.propTypes = {
+  enquiryId: PropTypes.string,
+};

@@ -5,6 +5,7 @@ import Heading from "../layout/Heading";
 import styles from "../../styles/modules/Establishments.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import PropTypes from "prop-types";
 
 export default function EstablishmentList({ placeholder }) {
   const url = BASE_URL + ESTABLISHMENTS_PATH + READ_KEY;
@@ -46,7 +47,6 @@ export default function EstablishmentList({ placeholder }) {
         {data.map((data) => {
           let backgroundImg =
             "https://holidaze.fridarognstad.one/wp-content/uploads/woocommerce-placeholder.png";
-          console.log(data.images.src);
 
           return (
             <div key={data.id} className={styles.estCard}>
@@ -72,3 +72,7 @@ export default function EstablishmentList({ placeholder }) {
     </div>
   );
 }
+
+EstablishmentList.propTypes = {
+  placeholder: PropTypes.string,
+};

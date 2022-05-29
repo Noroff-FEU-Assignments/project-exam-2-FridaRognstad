@@ -5,5 +5,5 @@ export default function FormError({ message }) {
 }
 
 FormError.propTypes = {
-  content: PropTypes.string,
+  message: PropTypes.string,
 };

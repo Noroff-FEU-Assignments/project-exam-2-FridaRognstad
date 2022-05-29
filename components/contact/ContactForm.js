@@ -27,7 +27,11 @@ export default function ContactForm() {
       .min(10, "Message must contain minimum 10 characters"),
   });
 
-  const { register, handleSubmit, errors } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: errors,
+  } = useForm({
     resolver: yupResolver(schema),
   });
 
@@ -58,12 +62,15 @@ export default function ContactForm() {
           <input type="hidden" id="post" value={id} {...register("post")} />
           <label htmlFor="author_name">Full name</label>
           <input id="author_name" {...register("author_name")} />
+          {errors.author_name && <span>{errors.author_name.message}</span>}
 
           <label htmlFor="author_email">Email</label>
           <input id="author_email" type="email" {...register("author_email")} />
+          {errors.author_email && <span>{errors.author_email.message}</span>}
 
           <label htmlFor="content">Message</label>
           <textarea id="content" {...register("content")} />
+          {errors.content && <span>{errors.content.message}</span>}
 
           <button className={styles.button}>Send</button>
         </form>

@@ -42,7 +42,7 @@ export default function AddPost() {
     <>
       <Heading title="Add Establishment" />
       <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset disabled={submitting}>
+        <fieldset>
           <div>
             <label htmlFor="name">Title</label>
             <input id="name" {...register("name")} />
@@ -58,7 +58,7 @@ export default function AddPost() {
             <input id="price" {...register("price")} />
           </div>
 
-          <button>{submitting ? "Submitting..." : "Submit"}</button>
+          <button>{"Submit"}</button>
         </fieldset>
       </form>
     </>

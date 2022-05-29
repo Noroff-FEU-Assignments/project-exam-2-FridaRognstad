@@ -3,6 +3,7 @@ import axios from "axios";
 import { BASE_URL, ESTABLISHMENTS_PATH, READ_KEY } from "../../constants/Api";
 import { useState, useEffect } from "react";
 import styles from "../../styles/modules/Home.module.scss";
+import PropTypes from "prop-types";
 
 export default function EstablishmentForm({ placeholder }) {
   const url = BASE_URL + ESTABLISHMENTS_PATH + READ_KEY;
@@ -62,3 +63,7 @@ export default function EstablishmentForm({ placeholder }) {
     </div>
   );
 }
+
+EstablishmentForm.propTypes = {
+  placeholder: PropTypes.string,
+};
