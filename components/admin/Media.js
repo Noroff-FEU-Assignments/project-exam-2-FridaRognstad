@@ -22,7 +22,7 @@ export default function MediaDropdown({ register }) {
   }, []);
 
   return (
-    <select name="featured_media" ref={register}>
+    <select name="images.src" ref={register}>
       <option value="">Select media</option>
       {media.map((media) => {
         return (

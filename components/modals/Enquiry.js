@@ -70,9 +70,6 @@ export default function EnquaryForm({ enquiryId }) {
           <label htmlFor="review">Check in</label>
           <input id="review" type="date" {...register("review")} />
 
-          <label htmlFor="review">Check out</label>
-          <input id="rating" type="date" {...register("rating")} />
-
           <button className={styles.button}>Send</button>
         </form>
       </div>

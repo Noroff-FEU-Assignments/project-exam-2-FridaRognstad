@@ -44,6 +44,10 @@ export default function EstablishmentList({ placeholder }) {
 
       <div className={styles.establishments}>
         {data.map((data) => {
+          let backgroundImg =
+            "https://holidaze.fridarognstad.one/wp-content/uploads/woocommerce-placeholder.png";
+          console.log(data.images.src);
+
           return (
             <div key={data.id} className={styles.estCard}>
               <Link
@@ -53,7 +57,7 @@ export default function EstablishmentList({ placeholder }) {
                 <a>
                   <div
                     className={styles.cardImg}
-                    style={{ backgroundImage: `url(${data.images[0].src})` }}
+                    style={{ backgroundImage: `url(${backgroundImg})` }}
                   ></div>
                   <div className={styles.cardText}>
                     <Heading size="3" title={data.name} />
