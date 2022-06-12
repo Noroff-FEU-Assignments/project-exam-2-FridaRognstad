@@ -34,7 +34,7 @@ What the project does:
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:Noroff-FEU-Assignments/js-frameworks-course-assignment-FridaRognstad.git
+git clone git@github.com:Noroff-FEU-Assignments/project-exam-2-FridaRognstad.git
 ```
 
 2. Install the dependencies:
