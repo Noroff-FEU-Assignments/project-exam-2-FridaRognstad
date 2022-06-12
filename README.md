@@ -1,109 +1,74 @@
-Admin Login:
+##Admin Login:
 Username: admin
 Password: Password123
 
-# Project Exam 2
+# Project Exam
 
-There are two options with this Project Exam.
-You need to only choose one and please follow the deliveries carefully.
+![image](http://localhost:3000/_next/image?url=%2Fproject-exam-index.jpg&w=1920&q=75)
 
-## Goal
+This is a Next.js app made for my Project Exam 2 during my Front-end studies. It is a booking site for a fictional tourist agency in Bergen called Holidaze where you can book establishments. The project makes calls to a headless WordPress API.
 
-To take the skills learned over the last two years and take on an extensive project where the finished product should reflect the candidate's general development capabilities, in addition to visual and technical skills.
+## Description
 
-## Brief
+The purpose of this project was to show and develop what I have learned during my Front-end studies at [Noroff School of Technology and Digital Media](https://www.noroff.no/). 
 
-For this assignment you have the choice between getting a real world client that you will manage and build a website for, or a case study to make a hotel booking website.
+What the project does:
+- Using [Axios](https://axios-http.com/) to GET and POST data from Wordpress API storing establishments data.
+- Using dymanic link in a [Next.js](https://nextjs.org/) app that shows details about the different establishments.
+- Building a login form for admin using [React Hook Form](https://react-hook-form.com/) and [Yup](https://github.com/jquense/yup).
+- Let the users conatct the adim using a Contact form and book establishments using a booking form.
+- Admin can POST new establishments and see messages from contactform and bookingform.
 
-Whatever project you choose, the final submission must have the following:
+## Built With
 
-- A Gantt chart planning the project
-- A style guide
-- An Adobe XD prototype
-- Use a CSS Pre-processor and BEM if not using CSS Modules, Styled Components, etc
-- Use a React.js or Next.js
-- You can use regular JS or TypeScript
-- Please use create-react-app or create-next-app to generate a skeleton project for yourself
-- A fully working website that fulfils the brief
+- [Next.js](https://nextjs.org/)
+- [Axios](https://axios-http.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [React Hook Form Resolvers](https://github.com/react-hook-form/resolvers)
+- [Yup](https://github.com/jquense/yup)
+- [Sass](https://sass-lang.com/)
 
-## Option 1: Real World Client
+## Getting Started
 
-Make a website or application for a real world client. The project should offer a significant enough scope to be able to show off your skills as a developer, and hopefully the project can form a central part of your portfolio for when you start applying for jobs.
+### Installing
 
-The process followed for the project will differ depending on the client and the requirements of their project.
+1. Clone the repo:
 
-Note: The project has to have a big enough scope to show off the skills learned over your studies. An example of the level we’re expecting would be a website where administrators can add, update, remove products, and users can search, filter, and contact administrators. If you are unsure if your potential client’s brief is strong enough for the Project Exam 2, please message your tutors. Use of a JavaScript Framework is a requirement.
+```bash
+git clone git@github.com:Noroff-FEU-Assignments/js-frameworks-course-assignment-FridaRognstad.git
+```
 
-### Recommended Process
+2. Install the dependencies:
 
-Week 1 to 3: Finding client, Planning and Design
-Week 4 to 6: Coding
-Week 7: Bug Fixing
+```
+yarn install
+```
 
-### Level 1 Process
+### Running
 
-- Use your networks and connections to find a client that needs a website or application built.
-- Understand their requirements and come up with a functional specification for the project. You can write the functional specification using “System shall” statements. For example, “The system shall allow visitors to search for an article”
-- Create a Gantt chart for the project, planning out your deliverables for the client.
-- Make a design style guide and then take this style guide and create an Adobe XD prototype. Present to the client for feedback.
-- Develop the site ensuring you deliver all that is listed in your functional specification.
-- Test the website on various platforms and browsers. Ensure the site is bug-free and working before presenting to the client.
-- Go through a final round of changes before going live with the website.
-- Write a report on your process and decisions for the project. Please use the report template provided.
 
-### Submission
+To build the app, run the following commands:
 
-End of week 3: Functional specification, Gantt chart, style guide, and Adobe XD prototype
-End of week 7: Report with link to website, and all files in a compressed ZIP
+```bash
+yarn run build
+```
 
-## Option 2: Hotel Booking Website
+To run the app, run the following commands:
 
-A local tourism agency in Bergen is launching a new website called ‘Holidaze’ for visitors to the area to be able to find hotels, B&Bs and guesthouses, and for the accommodation owners to receive enquiries.
+```bash
+yarn run start
+```
 
-The project requires you to create the visitor side of the website where users can search accommodation and make enquiries, as well as the administration side where properties can be added and enquiries managed.
+To go into development mode, run the following commands:
 
-You will need to create an API to store the data for the establishments, enquiries and contact submissions. You can choose to use WordPress or Strapi as a Headless CMS, but it is very important that the API is deployed and publicly available. Please do not submit any files for your API. Only submit the website you have created.
+```bash
+yarn run dev
+```
 
-## Requirements for the Website
+## Contributing
 
-### Visitor Side
+- This project is private and is not possible to contibuting.
 
-- Homepage
-- Search bar typeahead (auto dropdown with hotel names that match what has been typed)
-- A results page with all hotels
-- The hotel specific page which displays all details about the hotel
-- An enquiry page either modal or separate page
-- A contact page (different to enquiry page) which goes to the admin for Holidaze
+## Contact
 
-### Admin side
-
-- Create a login section that makes use of JWT tokens
-- List of enquiries and new enquiries appear when user submits the form on the enquiry page
-- List of messages from contact form
-- The admin can create a new establishment
-
-### Recommended Process
-
-Week 1 and 2: Planning and Design
-Week 3 to 6: Coding
-Week 7: Bug Fixing
-
-### Level 1 Process
-
-- Start by planning out the project.
-- Next begin your research of likely users and browse competitor websites for ideas.
-- Create a style guide
-- Build an Adobe XD prototype (or you can use Sketch or Figma).
-- Start coding.
-- Once you’ve finished development, start looking for bugs and ensure the site functions well on all viewports. Test the code on different devices. Because your API is public, the code shouldn’t rely on a local API.
-- Refactor your code.
-- Ask another student to look over your code and ask them if they can see how it might be better implemented. This is important to get an outside view on your code. Please attach this feedback to your report.
-- Add the login details for your admin side at the top of this README.md file so that it's easy for the marker to spot.
-
-### Submission
-
-End of week 7: Report with link to website or a Github link and feedback from code review, and all files in a compressed ZIP. Login details added to the README.md.
-
-### Resources
-
-Report template included in the repo.
+[My LinkedIn page](https://no.linkedin.com/in/frida-rognstad)
