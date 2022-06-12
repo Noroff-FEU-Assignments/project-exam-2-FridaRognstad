@@ -13,9 +13,9 @@ The purpose of this project was to show and develop what I have learned during m
 
 What the project does:
 - Using [Axios](https://axios-http.com/) to GET and POST data from Wordpress API storing establishments data.
-- Using dymanic link in a [Next.js](https://nextjs.org/) app that shows details about the different establishments.
+- Using dynamic link in a [Next.js](https://nextjs.org/) app that shows details about the different establishments.
 - Building a login form for admin using [React Hook Form](https://react-hook-form.com/) and [Yup](https://github.com/jquense/yup).
-- Let the users conatct the adim using a Contact form and book establishments using a booking form.
+- Let the users contact the admin using a Contact form and book establishments using a booking form.
 - Admin can POST new establishments and see messages from contactform and bookingform.
 
 ## Built With
@@ -71,3 +71,4 @@ yarn run dev
 ## Contact
 
 [My LinkedIn page](https://no.linkedin.com/in/frida-rognstad)
+[My discord](Frida Rognstad - Aug20 FT#3258)
