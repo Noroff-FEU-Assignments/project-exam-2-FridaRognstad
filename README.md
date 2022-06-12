@@ -3,7 +3,7 @@
 - Username: admin
 - Password: Password123
 
-![image](http://localhost:3000/_next/image?url=%2Fproject-exam-index.jpg&w=1920&q=75)
+![image](https://portfolio2-ca-frida-rognstad.netlify.app/_ipx/w_1920,q_75/%2Fproject-exam-index.jpg?url=%2Fproject-exam-index.jpg&w=1920&q=75)
 
 This is a Next.js app made for my Project Exam 2 during my Front-end studies. It is a booking site for a fictional tourist agency in Bergen called Holidaze where you can book establishments. The project makes calls to a headless WordPress API.
 
